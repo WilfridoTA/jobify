@@ -122,12 +122,22 @@ export default function App() {
               {/*-------------------Next button-----------------------*/}
               <Button
                 display={activeStep === 0 ? "" : "none"}
-                onSubmit={() => {}}
+                onClick={() => {
+                  console.log(JSON.stringify({
+                    profesion: profesion,
+                    estudios: estudios,
+                    experiencia: experiencia,
+                    liderazgo: liderazgo,
+                    posiciones: posiciones,
+                    modalidad: modalidad,
+                    ubicacion: ubicacion
+                  }, null, 2));
+                }}
                 colorScheme="blue"
                 variant="solid"
               >
                 Find Jobs
-              </Button>              
+              </Button>          
             </Flex>
           </Flex>
         </ButtonGroup>
