@@ -15,11 +15,6 @@ import {
   StepStatus,
   StepIcon,
   useSteps,
-  Card,
-  CardBody,
-  Heading,
-  Stack,
-  Checkbox,
 } from "@chakra-ui/react";
 
 import { useState } from "react";
@@ -36,10 +31,13 @@ export default function App() {
     count: steps.length,
   });
 
-  const [name, setName] = useState("");
-  const [institution, setInstitution] = useState("");
-  const [email, setEmail] = useState("");
-  const [country, setCountry] = useState("");
+  const [profesion, setProfesion] = useState("");
+  const [estudios, setEstudios] = useState("");
+  const [experiencia, setExperiencia] = useState("");
+  const [liderazgo, setLiderazgo] = useState("");
+  const [posiciones, setPosiciones] = useState("");
+  const [modalidad, setModalidad] = useState("");
+  const [ubicacion, setUbicacion] = useState("");
 
   return (
     <>
@@ -75,14 +73,27 @@ export default function App() {
         </Stepper>
 
         <Form
-          country={country}
-          institution={institution}
-          name={name}
-          email={email}
-          setEmail={setEmail}
-          setCountry={setCountry}
-          setInstitution={setInstitution}
-          setName={setName}
+          profesion={profesion}
+          setProfesion={setProfesion}
+          
+          estudios = {estudios}
+          setEstudios = {setEstudios}
+
+          experiencia={experiencia}
+          setExperiencia={setExperiencia}
+
+          liderazgo={liderazgo}
+          setLiderazgo={setLiderazgo}
+
+          posiciones = {posiciones}
+          setPosiciones={setPosiciones}
+
+          modalidad = {modalidad}
+          setModalidad={setModalidad}
+
+          ubicacion={ubicacion}
+          setUbicacion={setUbicacion}
+
         />
 
         <ButtonGroup mt="5%" w="100%">
@@ -90,7 +101,7 @@ export default function App() {
             <Flex>
               {/*--------------------Back button-----------------------*/}
               <Button
-                onClick={() => {
+                onSubmit={() => {
                   setActiveStep(activeStep - 1);
                 }}
                 display={activeStep === 1 ? "" : "none"}
@@ -105,12 +116,22 @@ export default function App() {
               {/*-------------------Next button-----------------------*/}
               <Button
                 display={activeStep === 0 ? "" : "none"}
-                onClick={() => {}}
+                onClick={() => {
+                  console.log(JSON.stringify({
+                    profesion: profesion,
+                    estudios: estudios,
+                    experiencia: experiencia,
+                    liderazgo: liderazgo,
+                    posiciones: posiciones,
+                    modalidad: modalidad,
+                    ubicacion: ubicacion
+                  }, null, 2));
+                }}
                 colorScheme="blue"
                 variant="solid"
               >
                 Find Jobs
-              </Button>
+              </Button>          
             </Flex>
           </Flex>
         </ButtonGroup>
