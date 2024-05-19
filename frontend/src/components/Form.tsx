@@ -10,25 +10,37 @@ import {
 } from "@chakra-ui/react";
 
 interface IFormProps {
-  name: string;
-  setName: React.Dispatch<React.SetStateAction<string>>;
-  institution: string;
-  setInstitution: React.Dispatch<React.SetStateAction<string>>;
-  email: string;
-  setEmail: React.Dispatch<React.SetStateAction<string>>;
-  country: string;
-  setCountry: React.Dispatch<React.SetStateAction<string>>;
+  profesion: string;
+  setProfesion: any;
+  estudios: string;
+  setEstudios: any;
+  experiencia: string;
+  setExperiencia: any;
+  liderazgo: string;
+  setLiderazgo: any;
+  posiciones: string;
+  setPosiciones: any;
+  modalidad: string;
+  setModalidad: any;
+  ubicacion: string;
+  setUbicacion: any;
 }
 
 export default function Form({
-  setName,
-  setInstitution,
-  email,
-  setEmail,
-  setCountry,
-  country,
-  institution,
-  name,
+  setProfesion,
+  setEstudios,
+  setExperiencia,
+  setLiderazgo,
+  setPosiciones,
+  setModalidad,
+  setUbicacion,
+  profesion,
+  estudios,
+  experiencia,
+  liderazgo,
+  posiciones,
+  modalidad,
+  ubicacion,
 }: IFormProps) {
   return (
     <>
@@ -36,9 +48,9 @@ export default function Form({
         <FormLabel fontWeight={"normal"}>¿Cuál es tu profesión?</FormLabel>
         <Input
           autoComplete="off"
-          value={institution}
+          value={profesion}
           onChange={(e) => {
-            setInstitution(e.target.value);
+            setProfesion(e.target.value);
           }}
         />
       </FormControl>
@@ -48,9 +60,9 @@ export default function Form({
         </FormLabel>
         <Input
           autoComplete="off"
-          value={institution}
+          value={estudios}
           onChange={(e) => {
-            setInstitution(e.target.value);
+            setEstudios(e.target.value);
           }}
         />
       </FormControl>
@@ -60,9 +72,9 @@ export default function Form({
         </FormLabel>
         <Input
           autoComplete="off"
-          value={institution}
+          value={experiencia}
           onChange={(e) => {
-            setInstitution(e.target.value);
+            setExperiencia(e.target.value);
           }}
         />
       </FormControl>
@@ -72,9 +84,9 @@ export default function Form({
         </FormLabel>
         <Input
           autoComplete="off"
-          value={institution}
+          value={liderazgo}
           onChange={(e) => {
-            setInstitution(e.target.value);
+            setLiderazgo(e.target.value);
           }}
         />
       </FormControl>
@@ -82,9 +94,9 @@ export default function Form({
         <FormLabel fontWeight={"normal"}>¿Qué cargos has tenido?</FormLabel>
         <Input
           autoComplete="off"
-          value={institution}
+          value={posiciones}
           onChange={(e) => {
-            setInstitution(e.target.value);
+            setPosiciones(e.target.value);
           }}
         />
       </FormControl>
@@ -94,9 +106,9 @@ export default function Form({
         </FormLabel>
         <Input
           autoComplete="off"
-          value={institution}
+          value={modalidad}
           onChange={(e) => {
-            setInstitution(e.target.value);
+            setModalidad(e.target.value);
           }}
         />
       </FormControl>
@@ -106,9 +118,9 @@ export default function Form({
         </FormLabel>
         <Input
           autoComplete="off"
-          value={institution}
+          value={ubicacion}
           onChange={(e) => {
-            setInstitution(e.target.value);
+            setUbicacion(e.target.value);
           }}
         />
       </FormControl>
