@@ -1,12 +1,9 @@
 "use client";
 
 import {
-  Flex,
   FormControl,
   FormLabel,
   Input,
-  Select,
-  FormHelperText,
 } from "@chakra-ui/react";
 
 interface IFormProps {

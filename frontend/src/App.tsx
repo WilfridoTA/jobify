@@ -15,16 +15,10 @@ import {
   StepStatus,
   StepIcon,
   useSteps,
-  Card,
-  CardBody,
-  Heading,
-  Stack,
-  Checkbox,
 } from "@chakra-ui/react";
 
 import { useState } from "react";
 import Form from "./components/Form";
-import axios from 'axios';  
 
 export default function App() {
   const steps = [
