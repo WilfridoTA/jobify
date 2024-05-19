@@ -118,7 +118,7 @@ export default function App() {
             <Flex>
               {/*--------------------Back button-----------------------*/}
               <Button
-                onClick={() => {
+                onSubmit={() => {
                   setActiveStep(activeStep - 1);
                 }}
                 display={activeStep === 1 ? "" : "none"}
@@ -133,12 +133,12 @@ export default function App() {
               {/*-------------------Next button-----------------------*/}
               <Button
                 display={activeStep === 0 ? "" : "none"}
-                onClick={() => {}}
+                onSubmit={() => {}}
                 colorScheme="blue"
                 variant="solid"
               >
                 Find Jobs
-              </Button>
+              </Button>              
             </Flex>
           </Flex>
         </ButtonGroup>
