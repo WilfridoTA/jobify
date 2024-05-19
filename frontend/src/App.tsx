@@ -37,11 +37,6 @@ export default function App() {
     count: steps.length,
   });
 
-  // const [name, setName] = useState("");
-  // const [institution, setInstitution] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [country, setCountry] = useState("");
-
   const [profesion, setProfesion] = useState("");
   const [estudios, setEstudios] = useState("");
   const [experiencia, setExperiencia] = useState("");
@@ -105,13 +100,6 @@ export default function App() {
           ubicacion={ubicacion}
           setUbicacion={setUbicacion}
 
-          // institution={institution}
-          // name={name}
-          // email={email}
-          // setEmail={setEmail}
-          // setCountry={setCountry}
-          // setInstitution={setInstitution}
-          // setName={setName}
         />
 
         <ButtonGroup mt="5%" w="100%">
